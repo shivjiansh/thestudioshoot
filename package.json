@@ -1,0 +1,42 @@
+{
+  "name": "thestudioshot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:unit": "vitest run",
+    "verify:config": "node scripts/verify-configuration.mjs"
+  },
+  "dependencies": {
+    "firebase": "^11.1.0",
+    "firebase-admin": "^13.0.2",
+    "lucide-react": "^0.468.0",
+    "next": "^16.4.0",
+    "openai": "^7.32.0",
+    "razorpay": "^2.9.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.1",
+    "tailwindcss": "^4.0.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^16.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@eslint/eslintrc": "^3.2.0"
+  }
+}

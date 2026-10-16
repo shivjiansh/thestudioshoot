@@ -1,0 +1,10 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Uploads, previews, exports, and deletes are handled by authenticated server routes.
+    // Keep objects private; Firebase Admin access is governed by server IAM credentials.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // The application uses authenticated Next.js route handlers and Firebase Admin.
+    // Admin SDK writes must be authorized in each route/service; Admin SDK bypasses these rules.
+    // The browser receives no direct reads or writes to authoritative records.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
